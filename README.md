@@ -33,5 +33,5 @@ sudo chmod +x logs.sh
 ./logs.sh
 ```
 
-3. **Access:**
+3. **Access:**  
 visit http://localhost:7860
