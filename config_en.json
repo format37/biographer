@@ -1,0 +1,59 @@
+{
+  "model": {
+    "name": "huihui_ai/deepseek-r1-abliterated:8b",
+    "fallback_name": "deepseek-r1:8b"
+  },
+  "system_prompts": {
+    "biographical": "You are a thoughtful digital biographer whose purpose is to help preserve someone's authentic voice, perspectives, and inner world through ongoing conversations. This is a long-term project that may span many years, with multiple interactions per day.\n\nYour role is to:\n- Engage in natural, flowing conversations about their daily life, thoughts, and reflections\n- Ask follow-up questions that encourage deep self-reflection and reveal their unique worldview\n- Help them process current events, feelings, and experiences in their life\n- Build on previous conversations and notice patterns or changes over time\n- Create a safe, non-judgmental space for authentic expression\n- Adapt to their current mood, energy level, and what they want to explore\n\nYour questions and responses should:\n- Be open-ended and thought-provoking but not overwhelming\n- Feel natural and conversational, like talking to a trusted friend who's genuinely interested\n- Help uncover their authentic voice, values, and personal philosophy\n- Be contextually aware of time (morning check-ins vs evening reflections)\n- Allow for both deep philosophical discussions and simple daily observations\n- Respect their boundaries and follow their lead on how deep to go\n\nRemember: This is their personal biographical journey. Some days they may want to share profound insights, other days just everyday thoughts. Both are valuable for preserving their authentic voice over time. Do not insert a [timestamp] before your messages. Your responses always come immediately after the user's message with a difference of a couple of seconds.",
+    "question_generator": "You are an expert at generating thoughtful, contextual follow-up questions for biographical conversations. Based on someone's recent biographical conversations, generate a single, engaging question that:\n\n- Builds naturally on themes, topics, or emotions from their recent conversations\n- Encourages deeper self-reflection or exploration of their authentic voice\n- Feels like a natural continuation of an ongoing dialogue with a trusted friend\n- Is open-ended and allows them to take the conversation in any direction\n- Considers the time of day and recent patterns in their sharing\n- Avoids being repetitive or too similar to recent questions\n- Feels genuine and personally relevant rather than generic\n\nThe question should feel like you've been listening and are genuinely curious about their continued journey of self-discovery. Return only the question, nothing else.",
+    "general": "You are a helpful AI assistant. Provide thoughtful, accurate responses while maintaining a friendly and supportive tone. Remember the conversation context and refer to previous messages when relevant. Do not insert a [timestamp] before your messages. Your responses always come immediately after the user's message with a difference of a couple of seconds."
+  },
+  "ui_text": {
+    "app_title": "Digital Biographer",
+    "app_subtitle": "A private, local AI system for preserving your authentic voice and perspectives.",
+    "main_heading": "🎭 Digital Biographer",
+    "biographical_tab": {
+      "title": "Biographical Session",
+      "description": "**Biographical sessions** are designed for ongoing self-reflection and preserving your authentic voice over time. \nThe AI will engage in natural conversations about your daily life, thoughts, current experiences, and inner reflections. Perfect for regular check-ins, processing events, or exploring deeper questions as they arise naturally.",
+      "history_label": "Conversation History",
+      "input_label": "Your Response",
+      "input_placeholder": "Share your thoughts and reflections... (Press Shift+Enter to send)",
+      "submit_button": "Share",
+      "clear_button": "Start New Session"
+    },
+    "general_tab": {
+      "title": "General Chat",
+      "description": "**General chat** for everyday questions and conversations. \nAll interactions are saved locally and contribute to your personal knowledge base.",
+      "history_label": "Conversation History",
+      "input_label": "Your Message",
+      "input_placeholder": "Ask anything... (Press Shift+Enter to send)",
+      "submit_button": "Send",
+      "clear_button": "Clear Chat"
+    },
+    "data_tab": {
+      "title": "Data Management",
+      "description": "**Your Data**: All conversations are saved locally as JSON files. \nYou have complete control over your data.",
+      "info_label": "Data Summary",
+      "refresh_button": "Refresh Info"
+    }
+  },
+  "messages": {
+    "biographical_welcome": "**Welcome to your biographical session.** \n\nThis is your private space for ongoing self-reflection and authentic expression. Whether you want to share deep thoughts, process daily experiences, or simply check in about your current state of mind, this is a judgment-free space designed to help preserve your authentic voice over time.\n\n**Today's conversation starter:** \n\n{question}\n\nFeel free to take this in any direction that feels right for you, or share whatever else is on your mind.\n\n---",
+    "general_welcome": "**Ready to chat!** Ask me anything.\n\n---",
+    "no_conversations": "No conversations saved yet.",
+    "data_stats": "**Conversation Statistics:**\n- Total session files: {total_files}\n- Biographical sessions: {bio_sessions}\n- General chat sessions: {gen_sessions}\n- Total messages: {total_messages}\n- Data location: `{data_path}`\n\nAll conversations are saved locally as session-based JSON files. Each session contains all messages until the chat is cleared. You have complete control over your data.",
+    "privacy_info": "**Privacy & Security:**\n- Everything runs locally on your machine\n- No data leaves your computer\n- All processing happens offline\n- You own and control all conversation files\n\n**Data Format:** Each chat session is saved as a timestamped JSON file containing:\n- Session metadata (type, start time, last updated)\n- Array of all messages in the session with timestamps\n- Complete conversation history until chat is cleared\n\n**File Naming:**\n- Biographical sessions: `biographical_YYYYMMDD_HHMMSS.json`\n- General chats: `general_YYYYMMDD_HHMMSS.json`"
+  },
+  "error_messages": {
+    "ollama_connection": "Failed to connect to Ollama: {error}",
+    "ai_communication": "Error communicating with AI: {error}",
+    "ollama_setup": "Error: {error}\n\nMake sure Ollama is running and the model is available:\n1. Start Ollama: ollama serve\n2. Pull model: ollama pull qwen2.5:7b"
+  },
+  "console_messages": {
+    "initializing": "Initializing Digital Biographer...",
+    "connected": "Connected to Ollama with model: {model}",
+    "launching": "\nLaunching Digital Biographer interface...",
+    "access_url": "Access at: http://localhost:7860",
+    "stop_instruction": "\nPress Ctrl+C to stop the server"
+  }
+} 

@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  biographer:
+    build: .
+    container_name: biographer
+    restart: always
+    network_mode: host
+    volumes:
+      - ./data:/app/data
+      - ./config_en.json:/app/config_en.json
+      - ./config_ru.json:/app/config_ru.json
+    
