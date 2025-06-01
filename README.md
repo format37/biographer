@@ -11,7 +11,7 @@ Digital Biographer is a privacy-first local AI-powered conversation system desig
 - GPU recommended (but not required)
 
 ### Installation
-
+#### Ubuntu
 1. **Ollama GPU LLM server:**
 ```
 git clone https://github.com/format37/ollama.git
@@ -31,6 +31,23 @@ sudo chmod +x compose.sh
 sudo chmod +x logs.sh
 ./compose.sh
 ./logs.sh
+```
+
+#### Windows
+1. **Ollama GPU LLM server:**
+```powershell
+git clone https://github.com/format37/ollama.git
+cd ollama
+.\compose.ps1
+.\pull_model.ps1 huihui_ai/deepseek-r1-abliterated:8b
+.\logs.ps1
+```
+2. **Biographer:**
+```powershell
+git clone https://github.com/format37/biographer.git
+cd biographer
+.\compose.ps1
+.\logs.ps1
 ```
 
 3. **Access:**  
