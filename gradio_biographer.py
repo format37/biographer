@@ -61,7 +61,7 @@ class DigitalBiographer:
         try:
             system_prompt = self.config["system_prompts"]["question_generator"]
             
-            context_message = f"""Recent biographical conversations:
+            context_message = f"""{self.config["messages"]["recent_conversations_header"]}
 
 {recent_context}
 
